@@ -1,0 +1,300 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round:regular);
+.off-div{
+    width: 15%;
+    margin-top: -12%;
+    border-radius: 11px;
+    margin-left: 71%;
+    height: 8%;
+    color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90%;
+}body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    color: #333;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-details {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+.product-details p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 50px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.buy-now-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.buy-now-button:hover {
+    background-color: #45a049;
+}
+.aprice-div{
+    width: 40%;
+    margin-top: -13%;
+    border-radius: 11px;
+    margin-left: 34%;
+    height: 8%;
+    color: #8f8f8f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Varela Round;
+    font-size: 80%;
+}
+.price-div{
+    width: 35%;
+    margin-top: 1%;
+    border-radius: 11px;
+    margin-left: 7%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    font-size: 110%;
+    font-family: Varela Round;
+}
+.count-div{
+    width: 43%;
+    margin-top: -9%;
+    border-radius: 5px;
+    margin-left: 44%;
+    height: 8%;
+    color: #8f8f8f;
+    display: flex;
+}
+.rating-div{
+    width: 19%;
+    margin-top: 1%;
+    border-radius: 3px;
+    margin-left: 23%;
+    height: 6%;
+    font-size: 80%;
+    text-align: center;
+    color: white;
+    background-color: rgb(12, 110, 50);
+    font-family: Varela Round;
+}
+.name-div {
+    width: 90%;
+    margin-top: 1%;
+    border-radius: 11px;
+    margin-left: 5%;
+    height: 10%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-size: 95%;
+    font-family: Varela Round;
+
+}
+
+.img-div{
+    width: 90%;
+    margin-top: 5%;
+    border-radius: 11px;
+    margin-left: 5%;
+    height: 63%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.fruit {
+    border-radius: 10px;
+    width: 210px;
+    height: 93%;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: ver;
+}
+.home-txt{
+    margin-left:10px ;
+    font-size: 200%;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-top: 30px;
+    height: 50px;
+    width: 90%;
+    font-family: Varela Round;
+    font-weight: 900;
+}
+::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+div.fruits-div {
+    overflow: auto;
+    white-space: nowrap;
+    height: 350px;
+    margin-left: 10px;
+}
+.fruit{
+    height: 100%;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.news-div{
+    align-items: center;
+    margin-top: 40px;
+    height: 260px;
+    width: 100%;
+    background-color: bisque;
+}
+.kart-img{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+.kart-txt{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    font-size: 120%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.kart-div{
+    height: 55%;
+    width: 8%;
+    border-radius:15px ;
+    background-color: rgb(232, 232, 232);
+    display: flex;
+}
+.search{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border:none;
+    background-color: rgb(232, 232, 232);
+    border-radius: 13px;
+    border: 1 px solid grey;
+    font-size: 16px;
+    background-image: url(../image/search_logo.png);
+    background-size: 18px;
+    background-position: 11px 12px; 
+    background-repeat: no-repeat;
+    padding: 6px 20px 8px 40px;
+}
+.profile-div{
+    height: 55%;
+    width: 8%;
+    border-radius: 15px;
+    display: flex;
+    background-color: rgb(232, 232, 232);
+    align-items: center;
+    justify-content: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+.fr{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+}
+.search-div{
+    height: 55%;
+    border-radius: 15px;
+    width: 47%;
+    background-color: rgb(39, 39, 39);
+    display: flex;
+    flex-direction: column;
+}
+.logout-div{
+    display: flex;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    height: 55%;
+    width: 8%;
+    background-color:  rgb(232, 232, 232);
+    border-radius: 15px;
+}
+.logo-div{
+    height: 100%;
+    width: 11%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.head{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-around;
+    box-shadow: 5px 5px 15px 5px rgb(211, 211, 211);
+    z-index: 2;
+}
+a{
+    font-style: none;
+}
+.instock{
+    color: green;
+}
+.nostock{
+    color: red;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .cart-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .cart-total {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .cart-total span {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .checkout-btn {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            width: 97.5%;
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+
+    <div class="cart-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Alter</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for i in kart%}
+                <tr>
+                    <td>{{i.name}}</td>
+                    <td>₹{{i.price}}</td>
+                    <td>{{i.quantity}}</td>
+                    <td>₹{{i.price}}</td>
+                    <td><a href="{%url 'removeproduct' i.id%}">Remove</a></td>
+                </tr>
+                {%endfor%}
+                <!-- Add more rows for additional products -->
+            </tbody>
+        </table>
+
+        <div class="cart-total">
+            <span>Total:₹{{total}}</span>
+        </div>
+        <a href="{%url 'checkout'%}" class="checkout-btn">Proceed to Checkout</a>
+        
+    </div>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+</body>
+<style>
+    /* Add your styles for messages here */
+.messages {
+    list-style: none;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.success {
+    color: #4CAF50;
+}
+
+.error {
+    color: #F44336;
+}
+
+</style>
+</html>

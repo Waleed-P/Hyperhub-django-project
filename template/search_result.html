@@ -1,0 +1,90 @@
+{%load static%}
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Varela Round">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<header>
+    <div class="head">
+        <div class="logo-div">
+            <img src="{% static 'image/main_logo.png'%}" height="100%" width="100%">
+        </div>
+        <div class="search-div">
+            <form method="get">
+            <input type="search" class="search" placeholder="Search for products.........." name="searchpro">
+            </form>
+        </div>
+        <div class="logout-div">Logout</div>
+        <div class="kart-div">
+            <div class="kart-img">
+                <img src="{% static 'image/kart_logo.png'%}" height="60%" width="60%">
+            </div>
+            <div class="kart-txt">Cart</div>
+        </div>
+        <div class="profile-div">Profile</div>
+    </div>
+</header>
+<body>
+    <div class="h">
+        <h1>Search Result</h1>
+    </div>
+    <div class="ser">
+        {%for i in pro%}
+        <p class="st"><a href="{%url 'details' i.id%}">{{i.name}}</a></p>
+        {%endfor%}
+    </div>
+    
+    
+</body>
+</html>
+
+<style>
+body {
+    font-family: 'Varela Round', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.h {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ser {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.st {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.st a {
+    text-decoration: none;
+    color: #333;
+}
+
+.st:hover {
+    background-color: #f0f0f0;
+}
+
+</style>

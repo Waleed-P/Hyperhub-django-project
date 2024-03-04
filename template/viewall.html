@@ -1,0 +1,29 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Home Appliences</h1>
+    {%for i in all%}
+        <div class="fruit">
+            <div class="img-div"><img src="{{i.image}}" width="160px" height="200px"></div>
+            <div class="name-div">{{i.name}}</div>
+            <div class="rating-div">{{i.rating}} ★</div>
+            <div class="count-div">({{i.rating_count}})</div>
+            <div class="price-div">₹{{i.our_price}}</div>
+            <div class="aprice-div">₹ <s>{{i.actual_price}}</s></div>
+            <div class="off-div">{{i.offer}}% off</div>
+        </div>
+        {%endfor%}
+</body>
+</html>
+<style>
+    h1{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+</style>
