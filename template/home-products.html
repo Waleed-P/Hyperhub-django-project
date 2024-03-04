@@ -1,0 +1,344 @@
+{% extends 'home.html'%}
+{%load static%}
+{%block c%}
+<div class="news-div">
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 6</div>
+        <img src="{% static 'image/slide 1.png'%}" style="width:100%">
+        <div class="text">Caption Text</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 6</div>
+        <img src="{% static 'image/slide 2.png'%}" style="width:100%">
+        <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 6</div>
+        <img src="{% static 'image/slide 3.png'%}" style="width:100%">
+        <div class="text">Caption Three</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 6</div>
+        <img src="{% static 'image/slide 4.png'%}" style="width:100%">
+        <div class="text">Caption Three</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">5 / 6</div>
+        <img src="{% static 'image/slide 5.png'%}" style="width:100%">
+        <div class="text">Caption Three</div>
+    </div>
+    <div class="mySlides fade">
+        <div class="numbertext">6 / 6</div>
+        <img src="{% static 'image/slide 6.png'%}" style="width:100%">
+        <div class="text">Caption Three</div>
+    </div>
+</div><br>
+<div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+
+
+
+    <div class="home-txt">Home Appliances</div>
+    <div class="fruits-div">
+        {%for i in ha%}
+        <div class="fruit">
+            <div class="img-div"><img src="{{i.image}}" width="160px" height="200px"></div>
+            <div class="name-div"><a href="{% url 'details' i.id%}">{{i.name}}</a></div>
+            <div class="rating-div">{{i.rating}} ★</div>
+            <div class="count-div">({{i.rating_count}})</div>
+            <div class="price-div">₹{{i.our_price}}</div>
+            <div class="aprice-div">₹ <s>{{i.actual_price}}</s></div>
+            <div class="off-div">{{i.offer}}% off</div>
+            <!-- <div class="instock">In stock</div> -->
+        </div>
+        {%endfor%}
+    </div>
+    <div class="home-txt">Mobile Phones</div>
+    <div class="fruits-div">
+        {%for i in phone%}
+        <div class="fruit">
+            <div class="img-div"><img src="{{i.image}}" width="150px" height="200px"></div>
+            <div class="name-div"><a href="{% url 'details' i.id%}">{{i.name}}</a></div>
+            <div class="rating-div">{{i.rating}} ★</div>
+            <div class="count-div">({{i.rating_count}})</div>
+            <div class="price-div">₹{{i.our_price}}</div>
+            <div class="aprice-div">₹<s>{{i.actual_price}}</s></div>
+            <div class="off-div">{{i.offer}}% off</div>
+        </div>
+        {%endfor%}
+    </div>
+    <div class="home-txt">Grocery</div>
+    <div class="fruits-div">
+        {%for i in grocery%}
+        <div class="fruit">
+            <div class="img-div"><img src="{{i.image}}" width="150px" height="200px"></div>
+            <div class="name-div"><a href="{% url 'details' i.id%}">{{i.name}}</a></div>
+            <div class="rating-div">{{i.rating}} ★</div>
+            <div class="count-div">({{i.rating_count}})</div>
+            <div class="price-div">₹{{i.our_price}}</div>
+            <div class="aprice-div">₹<s>{{i.actual_price}}</s></div>
+            <div class="off-div">{{i.offer}}% off</div>
+        </div>
+        {%endfor%}
+    </div>
+    <div class="home-txt">Home Furnishing</div>
+    <div class="fruits-div">
+        {%for i in fur%}
+        <div class="fruit">
+            <div class="img-div"><img src="{{i.image}}" width="190px" height="200px"></div>
+            <div class="name-div"><a href="{% url 'details' i.id%}">{{i.name}}</a></div>
+            <div class="rating-div">{{i.rating}} ★</div>
+            <div class="count-div">({{i.rating_count}})</div>
+            <div class="price-div">₹{{i.our_price}}</div>
+            <div class="aprice-div">₹<s>{{i.actual_price}}</s></div>
+            <div class="off-div">{{i.offer}}% off</div>
+        </div>
+        {%endfor%}
+    </div>
+    <div class="home-txt">Books</div>
+    <div class="fruits-div">
+        {%for i in books%}
+        <div class="fruit">
+            <div class="img-div"><img src="{{i.image}}" width="190px" height="200px"></div>
+            <div class="name-div"><a href="{% url 'details' i.id%}">{{i.name}}</a></div>
+            <div class="rating-div">{{i.rating}} ★</div>
+            <div class="count-div">({{i.rating_count}})</div>
+            <div class="price-div">₹{{i.our_price}}</div>
+            <div class="aprice-div">₹<s>{{i.actual_price}}</s></div>
+            <div class="off-div">{{i.offer}}% off</div>
+        </div>
+        {%endfor%}
+    </div>
+    <div class="home-txt">Beauty Products</div>
+    <div class="fruits-div">
+        {%for i in beauty%}
+        <div class="fruit">
+            <div class="img-div"><img src="{{i.image}}" width="190px" height="200px"></div>
+            <div class="name-div"><a href="{% url 'details' i.id%}">{{i.name}}</a></div>
+            <div class="rating-div">{{i.rating}} ★</div>
+            <div class="count-div">({{i.rating_count}})</div>
+            <div class="price-div">₹{{i.our_price}}</div>
+            <div class="aprice-div">₹<s>{{i.actual_price}}</s></div>
+            <div class="off-div">{{i.offer}}% off</div>
+        </div>
+        {%endfor%}
+    </div>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Varela+Round:regular);
+    div{
+        font-family: Varela Round;
+    }
+a{
+    font-style: none;
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  width: 100%;
+}
+</style>
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+{%endblock%}
+
+{% block a%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .admin-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .manage-section {
+            margin-bottom: 20px;
+        }
+
+        .manage-section button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        a{
+            font-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+
+        <section class="manage-section">
+            <h2>Manage Users</h2>
+            <a href="{%url 'users'%}"><button>List Users</button></a>
+            <a href="{%url 'createuser'%}"><button>Add User</button></a>
+        </section>
+
+        <section class="manage-section">
+            <h2>Manage Products</h2>
+            <a href="{% url 'addproduct'%}"><button>Add product</button></a>
+            <a href="{% url 'addcategory'%}"><button>Add Category</button></a>
+            <a href="{%url 'allproducts'%}"><button>View All Products</button></a>
+        </section>
+        <section class="manage-section">
+            <h2>Manage Inventory</h2>
+            <a href="{% url 'addinventory'%}"><button>Add Stock</button></a>
+            <a href="{% url 'listinventory'%}"><button>Show product stock</button></a>
+        </section>
+        <section class="manage-section">
+            <h2>Manage Delivery boys</h2>
+            <a href="{% url 'createuser'%}"><button onclick="showAlert()">Add delivery boy</button></a>
+            <a href="{% url 'deliveryboylist'%}"><button>Show current delivery boys</button></a>
+        </section>
+
+    </div>
+</body>
+<script>
+    function showAlert() {
+        alert("Cuation: If you add a delivery boy, you must put '@delivery' at the end of username");
+    }
+</script>
+</html>
+
+{%endblock%}
+{%block b%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Supermarket Delivery Tracking</title>
+</head>
+<body>
+    <main>
+        <section class="order-management">
+            <h2>My Orders</h2>
+            <!-- Order details and management options go here -->
+        </section>
+        <section class="gps-tracking">
+            <h2>Current Orders</h2>
+            <!-- Map or tracking information goes here -->
+        </section>
+        <section class="inventory-management">
+            <h2>Inventory Management</h2>
+            <!-- Inventory management options go here -->
+        </section>
+        <section class="safety-security">
+            <h2>Payment and Incentives</h2>
+            <!-- Safety and security information go here -->
+        </section>
+        <section class="training-support">
+            <h2>Training and Support</h2>
+            <!-- Training and support resources go here -->
+        </section>
+        <section class="payment-incentives">
+            <h2>Profile</h2>
+            <!-- Payment and incentive features go here -->
+        </section>
+    </main>
+</body>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+</style>
+</html>
+
+{%endblock%}
